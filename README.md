@@ -26,7 +26,7 @@ And the agent is able to view all the customers' requests and respond them.
 
 1. Make sure you postgres database is open and running properly.
 
-1. Go into server/db.js and update your postgres username, password, host, and port number.
+1. Go into server/.env and update your postgres username, password, host, and port number.
 
 1. Run the query inside server/database.sql.
 

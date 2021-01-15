@@ -1,0 +1,19 @@
+CREATE DATABASE HelpDesk_PERN_Stack;
+
+CREATE TABLE Users_Admin(
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  email TEXT NOT NULL UNIQUE,
+  password TEXT NOT NULL
+);
+
+CREATE TABLE Users_Client(
+  id SERIAL PRIMARY KEY,
+  ticket_code VARCHAR(8) NOT NULL UNIQUE
+);
+
+CREATE TABLE Chat_Log(
+  id SERIAL PRIMARY KEY,
+  id_client INTEGER NOT NULL,
+  message VARCHAR(255) NOT NULL
+);

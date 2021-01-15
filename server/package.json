@@ -4,5 +4,11 @@
   "description": "A helpdesk web app built with PERN Stack by Jingzhao Wang",
   "main": "index.js",
   "author": "Jingzhao Wang",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pg": "^8.5.1"
+  }
 }
