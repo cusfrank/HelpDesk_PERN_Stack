@@ -7,12 +7,19 @@ And the agent is able to view all the customers' requests and respond them.
 ## Features
 
 1. Admin users can login.
+
 1. Admin users can view all requests.
+
 1. Admin users can respond all requests.
+
 1. Admin users can delete a request.
+
 1. A client user is going to be assigned a ticket code when asking for help.
+
 1. A client user can come back with his ticket code.
+
 1. A client user can only view his own request.
+
 1. Client users are able to communicate with the admin users.
 
 ## Installation
