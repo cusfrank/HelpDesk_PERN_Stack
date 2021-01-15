@@ -1,0 +1,8 @@
+{
+  "name": "HelpDesk_PERN_Stack",
+  "version": "1.0.0",
+  "description": "A helpdesk web app built with PERN Stack by Jingzhao Wang",
+  "main": "index.js",
+  "author": "Jingzhao Wang",
+  "license": "UNLICENSED"
+}
