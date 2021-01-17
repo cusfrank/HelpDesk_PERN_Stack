@@ -23,7 +23,9 @@ This project is supposed to be very simple, minimalistic, and barebone. It has j
 
 1. A client user can only view his request.
 
-1. Client users can communicate with the admin users.
+1. Client users can communicate with admin users.
+
+1. Mobile friendly. The sidebar becomes a burger menu on small screens. A modal will show up once the user clicks the burger menu.
 
 ## Installation
 

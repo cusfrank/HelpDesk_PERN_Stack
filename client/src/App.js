@@ -1,4 +1,5 @@
 import react, { Fragment, useState } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link, BrowserRouter } from 'react-router-dom'
 import './App.css';
 
 //components
@@ -6,26 +7,29 @@ import SideNav from "./components/NavLinks/SideNav/SideNav"
 import MobileNav from './components/MobileNav/MobileNav';
 import Modal from './components/NavLinks/Modal/Modal'
 
+//pages
+import Register from "./Pages/Admin/Register/Register"
+import Login from "./Pages/Admin/Login/Login"
+import Home from "./Pages/Home"
+import TrackYourStatus from "./Pages/Customer/TrackYourStatus/TrackYourStatus"
+
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const toggleIsModalOpen = () => {
     isModalOpen ? setIsModalOpen(false) : setIsModalOpen(true)
   }
   return (
-    <Fragment>
+    <Router>
       <Modal isModalOpen={isModalOpen} toggleIsModalOpen={toggleIsModalOpen} />
       <SideNav />
       <MobileNav toggleIsModalOpen={toggleIsModalOpen} />
-
-      <div className="main">
-        <h2>HelpDesk PERN Stack</h2>
-
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-      </div>
-    </Fragment>
+      <Switch>
+        <Route path="/customer/trackyourstatus"><TrackYourStatus /></Route>
+        <Route path="/admin/register" ><Register /></Route>
+        <Route path="/admin/login" ><Login /></Route>
+        <Route path="/"><Home /></Route>
+      </Switch>
+    </Router>
   );
 }
 

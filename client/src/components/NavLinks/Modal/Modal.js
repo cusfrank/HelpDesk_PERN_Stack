@@ -2,7 +2,7 @@ import "./Modal.css"
 import NavLinks from "../NavLinks"
 
 const Modal = ({ isModalOpen, toggleIsModalOpen }) => {
-  var ModalDisplay = isModalOpen ? "block" : "none"
+  var ModalDisplay = isModalOpen ? "flex" : "none"
   const closeModal = () => {
     if (isModalOpen) toggleIsModalOpen()
   }
@@ -10,9 +10,9 @@ const Modal = ({ isModalOpen, toggleIsModalOpen }) => {
   return (
     <div id="myModal" className="modal" style={{ display: ModalDisplay }}>
       <div className="modal-content">
-        <span className="close" onClick={closeModal}>&times;</span>
-        <ul>
+        <ul className="modal-link">
           <NavLinks />
+          <li><span className="close" onClick={closeModal}>&times;</span></li>
         </ul>
       </div>
 

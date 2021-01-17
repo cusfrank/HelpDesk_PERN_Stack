@@ -1,5 +1,6 @@
 .main {
-  background-image: url("./images/CustomerService_Unsplash.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2)),
+    url("./Images/CustomerService_Unsplash.jpg");
   background-color: #fff; /* Used if the image is unavailable */
   height: 500px; /* You must set a specified height */
   background-position: center; /* Center the image */

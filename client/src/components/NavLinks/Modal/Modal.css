@@ -1,3 +1,6 @@
+.modal-link a {
+  color: #000;
+}
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -13,23 +16,29 @@
 
 /* Modal Content/Box */
 .modal-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   background-color: #fff;
   margin: 200px auto; /* 15% from the top and centered */
-  padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
   min-height: 200px;
 }
 
+.modal-link {
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0;
+  width: 100%;
+}
+
 .modal-content ul li {
-  padding: 1vh 8px 3vh 5vh;
-  text-decoration: none;
+  margin-top: 20px;
   font-size: 25px;
   color: #333;
   display: block;
-  text-align: left;
   cursor: pointer;
-  max-width: 200px;
 }
 
 .modal-content ul li:hover {
@@ -38,11 +47,7 @@
 
 /* The Close Button */
 .close {
-  position: relative;
   color: #000;
-  top: 2vh;
-  right: 10vh;
-  float: right;
   font-size: 48px;
   font-weight: bold;
   cursor: pointer;
