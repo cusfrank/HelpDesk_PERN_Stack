@@ -1,0 +1,35 @@
+.SideNav {
+  height: 100%;
+  width: 15vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 10vh;
+}
+
+.SideNav ul {
+  padding-left: 0;
+}
+
+.SideNav ul li {
+  padding: 1vh 8px 3vh 0;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.SideNav ul li:hover {
+  color: #888;
+}
+
+@media screen and (max-width: 1000px) {
+  .SideNav {
+    display: none;
+  }
+}

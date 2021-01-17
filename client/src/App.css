@@ -1,0 +1,18 @@
+.main {
+  background-image: url("./images/CustomerService_Unsplash.jpg");
+  background-color: #fff; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  margin-left: 15vw; /* Same as the width of the sidenav */
+  margin-top: 60px;
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 30px 5vw;
+}
+
+@media screen and (max-width: 1000px) {
+  .main {
+    margin-left: 0px;
+  }
+}

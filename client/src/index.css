@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 300px;
+  font: 16px Helvetica, Arial, sans-serif;
+}
+
+main {
+  width: 100%;
+}
+
+p {
+  line-height: 140%;
+}
+
+section {
+  width: 100%;
+  padding: 20px 50px;
+}
+
+.error {
+  color: hsl(0, 50%, 50%);
+}
+.success {
+  color: hsl(120, 70%, 30%);
+}

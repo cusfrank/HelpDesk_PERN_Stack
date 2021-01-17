@@ -1,16 +1,19 @@
 # HelpDesk PERN STACK
 
 HelpDesk PERN STACK is a web app for customers asking for help.
-The customers can send requests.
-And the agent is able to view all the customers' requests and respond them.
+The customers can send requests to administrators.
+
+And the agent can view all the customers' requests and respond to them.
+
+This project is supposed to be very simple, minimalistic, and barebone. It has just enough code to show the basics of PostgreSQL, Express, React, and node(PERN Stack).
 
 ## Features
 
-1. Admin users can login.
+1. Admin users can log in.
 
 1. Admin users can view all requests.
 
-1. Admin users can respond all requests.
+1. Admin users can respond to all requests.
 
 1. Admin users can delete a request.
 
@@ -18,15 +21,15 @@ And the agent is able to view all the customers' requests and respond them.
 
 1. A client user can come back with his ticket code.
 
-1. A client user can only view his own request.
+1. A client user can only view his request.
 
-1. Client users are able to communicate with the admin users.
+1. Client users can communicate with the admin users.
 
 ## Installation
 
-1. Make sure you postgres database is open and running properly.
+1. Make sure your PostgreSQL is open and running.
 
-1. Go into server/.env and update your postgres username, password, host, and port number.
+1. Go into server/.env and update your PostgreSQL username, password, host, and port number.
 
 1. Run the query inside server/database.sql.
 
