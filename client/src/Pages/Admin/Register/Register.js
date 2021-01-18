@@ -23,6 +23,9 @@ const Register = () => {
           if (data.message == "success") {
             window.location = "/admin/register/success"
           }
+          if (data.message == "failed") {
+            console.log("failed")
+          }
         })
     } catch (err) {
       console.error(err)

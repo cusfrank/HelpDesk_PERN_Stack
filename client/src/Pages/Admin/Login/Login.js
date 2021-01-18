@@ -8,7 +8,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const body = { Email, Password }
-      fetch("http://localhost:5000/api/admin/register", {
+      fetch("http://localhost:5000/api/admin/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
