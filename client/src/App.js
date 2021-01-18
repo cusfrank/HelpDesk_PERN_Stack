@@ -18,6 +18,7 @@ function App() {
   const toggleIsModalOpen = () => {
     isModalOpen ? setIsModalOpen(false) : setIsModalOpen(true)
   }
+
   return (
     <Router>
       <Modal isModalOpen={isModalOpen} toggleIsModalOpen={toggleIsModalOpen} />

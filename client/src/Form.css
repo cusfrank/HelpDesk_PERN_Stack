@@ -9,6 +9,13 @@ ul li {
   justify-content: space-between;
   list-style-type: none;
 }
+ul li span {
+  padding: 5px;
+  color: #fff;
+  border-color: #fff;
+  border-width: 2px;
+  border-style: dotted;
+}
 
 form ul li {
   margin-top: 10px;

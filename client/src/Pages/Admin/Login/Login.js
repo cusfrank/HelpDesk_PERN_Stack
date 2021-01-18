@@ -6,8 +6,8 @@ const Login = () => {
         <ul>
           <li><label>Email</label><input type="text" /></li>
           <li><label>Password</label><input type="text" /></li>
-          <li><div></div><button class="btn">Login</button></li>
-          <li className='next-block'><a style={{ "text-decoration": "underline" }} href="/admin/register">Register as Admin</a></li>
+          <li><div></div><button className="btn">Login</button></li>
+          <li className='next-block'><a style={{ "textDecoration": "underline" }} href="/admin/register">Register as Admin</a></li>
         </ul>
       </form>
 
