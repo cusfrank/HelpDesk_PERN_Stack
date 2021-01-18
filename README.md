@@ -3,7 +3,7 @@
 HelpDesk PERN STACK is a web app for customers asking for help.
 The customers can send requests to administrators.
 
-And the agent can view all the customers' requests and respond to them.
+Also, the administrator can view all the customers' requests and respond to them.
 
 This project is supposed to be very simple, minimalistic, and barebone. It has just enough code to show the basics of PostgreSQL, Express, React, and node(PERN Stack).
 

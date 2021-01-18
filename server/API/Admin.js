@@ -3,13 +3,12 @@ const router = require('express').Router();
 
 router.post("/register", async (req, res) => {
   try {
-    const { name, email, password } = req.body;
+    const { Name, Email, Password } = req.body;
     const newAdmin = await pool.query(
       "INSERT INTO admin (name, email, password) VALUES($1, $2, $3) RETURNING *",
-      [name, email, password]
+      [Name, Email, Password]
     );
-
-    res.json(newAdmin.rows[0]);
+    res.json({ message: "success" })
   } catch (err) {
     console.error(err.message);
   }

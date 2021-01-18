@@ -14,6 +14,6 @@ CREATE TABLE customer(
 
 CREATE TABLE chat_log(
   id SERIAL PRIMARY KEY,
-  id_client INTEGER NOT NULL,
+  id_customer INTEGER NOT NULL,
   message VARCHAR(255) NOT NULL
 );

@@ -19,7 +19,7 @@ const TrackYourStatus = () => {
         <ul>
           <li><label>Ticket Code</label><input type="text" /></li>
           <li><div></div><button className="btn">Search</button></li>
-          <li className="next-block"><label>New ticket code</label></li>
+          <li className="next-block"><label>New Ticket Code</label></li>
           <li><span style={{ "display": ticketCode ? "block" : "none" }}>{ticketCode}</span><button className="btn" onClick={newTicketCode}>Get</button></li>
         </ul>
       </form>
