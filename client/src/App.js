@@ -12,6 +12,7 @@ import Register from "./Pages/Admin/Register/Register"
 import Login from "./Pages/Admin/Login/Login"
 import TrackYourStatus from "./Pages/Customer/TrackYourStatus/TrackYourStatus"
 import Success from "./Pages/Admin/Register/Success/Success"
+import HelpDeskWindow from "./Pages/HelpDeskWindow/HelpDeskWindow"
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -25,6 +26,7 @@ function App() {
       <SideNav />
       <MobileNav toggleIsModalOpen={toggleIsModalOpen} />
       <Switch>
+        <Route path="/helpdeskwindow" exact><HelpDeskWindow /></Route>
         <Route path="/customer/trackyourstatus" exact><TrackYourStatus /></Route>
         <Route path="/admin/register/success" exact><Success /></Route>
         <Route path="/admin/register" exact ><Register /></Route>

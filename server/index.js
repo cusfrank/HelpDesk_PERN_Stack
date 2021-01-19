@@ -13,6 +13,8 @@ const adminAPI = require("./API/Admin")
 app.use("/api/admin", adminAPI)
 const customerAPI = require("./API/Customer")
 app.use("/api/customer", customerAPI)
+const chatLogAPI = require("./API/Chat_Log")
+app.use("/api/chat_log", chatLogAPI)
 //ROUTES//
 
 app.listen(5000, () => {
