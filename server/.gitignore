@@ -1,1 +1,7 @@
 node_modules
+.~*
+.env
+.vscode
+/config/*-local.json
+**.DS_Store
+uploads/
