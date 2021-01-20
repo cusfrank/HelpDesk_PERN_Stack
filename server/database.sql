@@ -15,7 +15,8 @@ CREATE TABLE customer(
 CREATE TABLE chat_log(
   id SERIAL PRIMARY KEY,
   id_customer INTEGER NOT NULL,
-  message VARCHAR(255) NOT NULL
+  message VARCHAR(255) NOT NULL,
+  id_admin INTEGER
 );
 
 CREATE EXTENSION pgcrypto;

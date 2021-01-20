@@ -24,9 +24,25 @@ router.post("/login", async (req, res) => {
     );
     if (searchResult.rows.length == 0) {
       res.json({ message: "failed" })
-    } else {
-      res.json({ message: "success" })
     }
+    const admin = searchResult.rows[0]
+
+    const token = jwt.sign({
+      id_admin: admin.id,
+      isAdmin: true,
+    }, process.env.TOKEN_SECRET, { expiresIn: "1h" });
+
+    res.status(201)
+      .cookie("auth-token", token, {
+        expires: new Date(Date.now() + 60 * 60 * 1000),
+        maxAge: 60 * 60 * 1000,
+        httpOnly: false,
+        sameSite: "Lax",
+        path: "/"
+      });
+
+    res.json({ message: "success" })
+
   } catch (err) {
     console.error(err.message);
     res.json({ message: "failed" })

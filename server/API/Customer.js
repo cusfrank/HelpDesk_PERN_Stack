@@ -31,7 +31,7 @@ router.post("/login", async (req, res) => {
     const token = jwt.sign({
       id_customer: customer.id,
       ticket_code: customer.ticket_code,
-      admin: false,
+      isAdmin: false,
     }, process.env.TOKEN_SECRET, { expiresIn: "1h" });
 
     res.status(201)
