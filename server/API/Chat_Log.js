@@ -1,6 +1,9 @@
 const pool = require("../db");
 const router = require('express').Router();
 
+const verifyToken = require("../Middleware/VerifyToken")
+
+
 router.post("/", async (req, res) => {
   try {
     const { id_customer, message } = req.body;
@@ -16,7 +19,7 @@ router.post("/", async (req, res) => {
 
 
 
-router.get("/", async (req, res) => {
+router.get("/", [verifyToken], async (req, res) => {
   try {
     const allMessages = await pool.query("SELECT * FROM chat_log");
     res.json(allMessages.rows);
@@ -25,15 +28,15 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/:ticket_code", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
-    const { ticket_code } = req.params;
+    const { ticket_code } = req.body;
     const messages = await pool.query(
       `
       SELECT message FROM chat_log AS m
       INNER JOIN customer AS c
       ON (m.id_customer=c.id) 
-      WHERE c.ticket_code= 'VLVPPVVD'
+      WHERE c.ticket_code= $1
       `
       , [ticket_code]);
     res.json(messages.rows)
@@ -42,10 +45,9 @@ router.get("/:ticket_code", async (req, res) => {
   }
 });
 
-router.put("/:ticket_code", async (req, res) => {
+router.put("/", async (req, res) => {
   try {
-    const { ticket_code } = req.params;
-    const { message } = req.body;
+    const { ticket_code, message } = req.body;
     const updateMessage = await pool.query(
       `
       UPDATE chat_log AS m 
@@ -60,9 +62,9 @@ router.put("/:ticket_code", async (req, res) => {
   }
 });
 
-router.delete("/:ticket_code", async (req, res) => {
+router.delete("/", async (req, res) => {
   try {
-    const { ticket_code } = req.params;
+    const { ticket_code } = req.body;
     const deletedChatLog = await pool.query(
       `DELETE FROM chat_log AS m
       USING customer AS c

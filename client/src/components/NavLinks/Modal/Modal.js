@@ -2,7 +2,7 @@ import "./Modal.css"
 import NavLinks from "../NavLinks"
 
 const Modal = ({ isModalOpen, toggleIsModalOpen }) => {
-  var ModalDisplay = isModalOpen ? "flex" : "none"
+  let ModalDisplay = isModalOpen ? "flex" : "none"
   const closeModal = () => {
     if (isModalOpen) toggleIsModalOpen()
   }
