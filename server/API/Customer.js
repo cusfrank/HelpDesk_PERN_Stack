@@ -24,7 +24,7 @@ router.post("/login", async (req, res) => {
     `
     , [ticket_code]);
   if (customer.rows.length == 0) {
-    res.status(400).json({ message: "failed" });
+    return res.status(400).json({ message: "failed" });
   }
   customer = customer.rows[0];
   try {
@@ -43,7 +43,10 @@ router.post("/login", async (req, res) => {
         path: "/"
       });
 
-    res.json({ message: "success" })
+    res.json({
+      message: "success",
+      auth_token: token
+    })
   } catch (err) {
     res.status(400).json({ message: err });
   }

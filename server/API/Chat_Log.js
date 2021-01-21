@@ -78,7 +78,7 @@ router.get("/", [verifyToken], async (req, res) => {
       const { ticket_code } = user;
       const messages = await pool.query(
         `
-      SELECT message FROM chat_log AS m
+      SELECT m.id, message FROM chat_log AS m
       INNER JOIN customer AS c
       ON (m.id_customer=c.id) 
       WHERE c.ticket_code= $1

@@ -1,7 +1,10 @@
 .main {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2)),
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.5)
+    ),
     url("./Images/CustomerService_Unsplash.jpg");
-  background-color: #fff; /* Used if the image is unavailable */
+  background-color: #bbb; /* Used if the image is unavailable */
   height: 500px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */

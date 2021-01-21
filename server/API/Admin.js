@@ -1,5 +1,6 @@
 const pool = require("../db");
 const router = require('express').Router();
+const jwt = require("jsonwebtoken")
 
 router.post("/register", async (req, res) => {
   try {

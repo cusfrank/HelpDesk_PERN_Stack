@@ -9,10 +9,10 @@ ul li {
   justify-content: space-between;
   list-style-type: none;
 }
-ul li span {
+ul li span .ticket_code {
   padding: 5px;
-  color: #fff;
-  border-color: #fff;
+  color: #000;
+  border-color: #000;
   border-width: 2px;
   border-style: dotted;
 }
@@ -36,5 +36,5 @@ a:hover {
   padding-top: 20px;
   border-width: 2px;
   border-style: solid;
-  border-color: #fff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  border-color: #000 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
 }

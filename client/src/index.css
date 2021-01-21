@@ -1,5 +1,5 @@
 label {
-  color: #fff;
+  color: #000;
 }
 
 * {
@@ -10,6 +10,7 @@ body {
   margin: 0;
   min-width: 300px;
   font: 16px Helvetica, Arial, sans-serif;
+  background-color: #aaa;
 }
 
 main {
@@ -37,13 +38,17 @@ section {
   border: none;
   color: white;
   background-color: hsl(207, 44%, 49%);
-  padding: 8px 20px;
+  padding: 8px 15px;
   margin: 2px 2px;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
 
 .btn:hover {
   background-color: hsl(207, 44%, 29%);
   cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .btn-black {
@@ -64,11 +69,19 @@ section {
 }
 
 .btn-delete {
-  background-color: hsl(20, 50%, 50%);
+  background-color: hsl(20, 44%, 49%);
 }
 
 .btn-delete:hover {
-  background-color: hsl(20, 50%, 40%);
+  background-color: hsl(20, 44%, 29%);
+}
+
+.btn-edit {
+  background-color: hsl(60, 44%, 49%);
+}
+
+.btn-edit:hover {
+  background-color: hsl(60, 44%, 29%);
 }
 
 input {

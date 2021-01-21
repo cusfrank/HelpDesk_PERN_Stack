@@ -36,19 +36,19 @@ const Register = () => {
     <div className="main">
       <form onSubmit={onSubmitForm}>
         <ul>
-          <li><label>Name</label>
+          <li><label>Name:</label>
             <input
               type="text"
               value={Name}
               onChange={e => setName(e.target.value)}
             /></li>
-          <li><label>Email</label>
+          <li><label>Email:</label>
             <input
               type="text"
               value={Email}
               onChange={e => setEmail(e.target.value)}
             /></li>
-          <li><label>Password</label>
+          <li><label>Password:</label>
             <input
               type="text"
               value={Password}

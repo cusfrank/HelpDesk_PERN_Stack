@@ -16,7 +16,14 @@ const Login = () => {
         body: JSON.stringify(body)
       })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {
+          if (data.message == "success") {
+            window.location = "/helpdeskwindow"
+          }
+          if (data.message == "failed") {
+            console.log("failed")
+          }
+        })
     } catch (err) {
       console.error(err)
     }
@@ -26,13 +33,13 @@ const Login = () => {
     <div className="main">
       <form onSubmit={onSubmitForm}>
         <ul>
-          <li><label>Email</label>
+          <li><label>Email:</label>
             <input
               type="text"
               value={Email}
               onChange={e => setEmail(e.target.value)}
             /></li>
-          <li><label>Password</label>
+          <li><label>Password:</label>
             <input
               type="text"
               value={Password}

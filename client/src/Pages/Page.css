@@ -1,9 +1,15 @@
 .main p {
-  color: #fff;
+  color: #000;
 }
 .main span {
-  color: #fff;
+  color: #000;
 }
 .main a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.main a:hover {
+  color: #555;
   text-decoration: underline;
 }

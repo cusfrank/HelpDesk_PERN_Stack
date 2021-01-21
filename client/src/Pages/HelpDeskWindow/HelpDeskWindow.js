@@ -1,9 +1,11 @@
 import "../Page.css"
+import ListMessages from "../../components/Chat_Log/ListMessages"
+
 const HelpDeskWindow = () => {
   return (
     <div className="main">
-      <p>Welcome to the HelpDesk Window </p>
-
+      <h3>HelpDesk Window </h3>
+      <ListMessages />
     </div>
   )
 }
