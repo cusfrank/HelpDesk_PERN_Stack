@@ -2,12 +2,12 @@ import react, { Fragment, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link, BrowserRouter } from 'react-router-dom'
 import './App.css';
 
-//components
-import SideNav from "./components/NavLinks/SideNav/SideNav"
-import MobileNav from './components/MobileNav/MobileNav';
-import Modal from './components/NavLinks/Modal/Modal'
+//Components
+import SideNav from "./Components/NavLinks/SideNav/SideNav"
+import MobileNav from './Components/MobileNav/MobileNav';
+import Modal from './Components/NavLinks/Modal/Modal'
 
-//pages
+//Pages
 import Register from "./Pages/Admin/Register/Register"
 import Login from "./Pages/Admin/Login/Login"
 import TrackYourStatus from "./Pages/Customer/TrackYourStatus/TrackYourStatus"

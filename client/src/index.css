@@ -10,7 +10,11 @@ body {
   margin: 0;
   min-width: 300px;
   font: 16px Helvetica, Arial, sans-serif;
-  background-color: #aaa;
+  background-image: linear-gradient(
+    to right,
+    rgba(70, 130, 180, 0.7),
+    rgba(0, 0, 0, 0)
+  );
 }
 
 main {

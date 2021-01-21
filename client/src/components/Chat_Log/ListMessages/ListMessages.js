@@ -1,6 +1,9 @@
 import React, { Fragment, useEffect, useState } from "react"
 import "./ListMessages.css"
 
+//Components
+import InputMessage from "../InputMessage/InputMessage"
+
 const ListMessages = () => {
   const [messages, setMessages] = useState([{}])
 
@@ -44,7 +47,8 @@ const ListMessages = () => {
           <button style={{ "display": (isAdmin == "true") ? "" : "none" }} className="btn btn-edit btn-advanced">EDIT</button>
           <button style={{ "display": (isAdmin == "true") ? "" : "none" }} className="btn btn-delete btn-advanced">DELETE</button>
         </div>))}
-      <button className="btn btn-reply">REPLY</button>
+
+      <InputMessage ticket_code={ticket_code} />
     </Fragment>
   )
 }

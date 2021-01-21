@@ -1,6 +1,7 @@
 .chip {
   display: block;
-  padding: 0 25px;
+  padding: 0 0px;
+  margin: 7px 25px;
   height: 50px;
   font-size: 16px;
   line-height: 50px;
@@ -20,10 +21,6 @@
   height: 50px;
   width: 50px;
   border-radius: 7px;
-}
-
-.btn-reply {
-  float: right;
 }
 
 .btn-advanced {
